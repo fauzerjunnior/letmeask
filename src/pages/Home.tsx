@@ -8,7 +8,7 @@ import '../styles/auth.scss';
 import Button from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 
-function Home() {
+const Home: React.FC = () => {
   const history = useHistory();
   const { user, signInWithGoogle } = useAuth();
 
@@ -23,7 +23,10 @@ function Home() {
   return (
     <div id="page-auth">
       <aside>
-        <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
+        <img
+          src={illustrationImg}
+          alt="Ilustração simbolizando perguntas e respostas"
+        />
         <strong>Crie salas de Q&amp;A ao-vivo</strong>
         <p>Tire as dúvidas da sua audiência em tempo-real</p>
       </aside>
@@ -31,26 +34,24 @@ function Home() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Letmeask!" />
-          <button className="create-room" onClick={handleCreateRoom}>
+          <button
+            type="button"
+            className="create-room"
+            onClick={handleCreateRoom}>
             <img src={googleIconImg} alt="Logo do Google" />
             Crie a sua sala com o Google
-          </button> 
+          </button>
           <div className="separator">ou entre em uma sala</div>
 
           <form>
-            <input 
-              type="text" 
-              placeholder="Digite o código da sala"
-            />
+            <input type="text" placeholder="Digite o código da sala" />
 
-            <Button type="submit">
-              Entrar na sala
-            </Button>
+            <Button type="submit">Entrar na sala</Button>
           </form>
         </div>
       </main>
     </div>
-  )
-}
+  );
+};
 
 export default Home;

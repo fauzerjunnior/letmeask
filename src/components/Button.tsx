@@ -1,13 +1,11 @@
-import { ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 import '../styles/button.scss';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-function Button(props: ButtonProps) {
-  return (
-    <button className="button" {...props} />
-  )
-}
+const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
+  return <button className="button" {...props} />;
+};
 
 export default Button;
