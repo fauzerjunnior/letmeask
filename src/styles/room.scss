@@ -9,6 +9,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
+      > div {
+        display: flex;
+        gap: 16px;
+
+        > button {
+          height: 40px;
+        }
+      }
 
       > img {
         max-height: 45px;
@@ -40,6 +49,10 @@
         font-weight: 500;
         font-size: 14px;
       }
+    }
+
+    .question-list {
+      margin-top: 32px;
     }
 
     form {
