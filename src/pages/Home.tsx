@@ -38,6 +38,12 @@ const Home: React.FC = () => {
       return;
     }
 
+    if (roomRef.val().closedAt) {
+      // eslint-disable-next-line no-alert
+      alert('Room already closed.');
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`);
   }
 
